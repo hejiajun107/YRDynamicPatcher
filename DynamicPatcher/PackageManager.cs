@@ -27,8 +27,8 @@ namespace DynamicPatcher
             return outputPath;
         }
 
-        const string github = "https://github.com/Xkein";
-        const string bilibili = "https://space.bilibili.com/84479377/";
+        const string github = "https://github.com/Xkein" + "https://github.com/hejiajun107/YRDynamicPatcher";
+        const string bilibili = "https://space.bilibili.com/84479377/" + "https://space.bilibili.com/38860280";
 
         readonly byte[] key = Encoding.Default.GetBytes(github + bilibili);
 
