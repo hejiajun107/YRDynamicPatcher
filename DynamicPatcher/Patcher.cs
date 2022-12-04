@@ -146,7 +146,11 @@ namespace DynamicPatcher
             using JsonTextReader reader = new JsonTextReader(file);
             var json = JObject.Load(reader);
 
-            if (!json["hide_console"].ToObject<bool>())
+            if (json["hide_console"].ToObject<bool>())
+            {
+                FreeConsole();
+            }
+            else
             {
                 AllocConsole();
                 Logger.WriteLine += Console.WriteLine;
